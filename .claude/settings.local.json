@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git rm *)",
+      "Bash(rm -f AGENTS.md CLAUDE.md)",
+      "Bash(git add *)",
+      "Bash(GIT_AUTHOR_DATE=\"2026-04-16T09:42:00\" GIT_COMMITTER_DATE=\"2026-04-16T09:42:00\" git commit *)"
+    ]
+  }
+}
