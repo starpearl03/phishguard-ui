@@ -1,6 +1,6 @@
-# SENTRY Dashboard
+# PhishGuard — Phishing Detection Dashboard
 
-Next.js 16 / React 19 admin panel for **SENTRY** — the phishing email detection and analysis system. This is the analyst-facing surface: it visualises classifier output, drives manual review of flagged emails, and gives admins a console for managing the Chrome extension installs that submit emails for live analysis.
+Next.js 16 / React 19 admin panel for **PhishGuard** — the phishing email detection and analysis system. This is the analyst-facing surface: it visualises classifier output, drives manual review of flagged emails, and gives admins a console for managing the Chrome extension installs that submit emails for live analysis.
 
 The dashboard lives as a separate component because:
 - **It is the analyst's tool, not the API's tool.** The API speaks a JSON envelope; turning that into charts, paginated tables, filter bars, and a sidebar is presentation work that does not belong in a FastAPI process.
@@ -145,7 +145,7 @@ graph TD
 
 ## How it connects to the API
 
-The companion repo is **[sentry-api](https://github.com/kudzaiprichard/sentry-api)** (folder: `Api`).
+The companion repo is **[sentry-api](https://github.com/starpearl03/sentry-api)** (folder: `Api`).
 
 | Direction | What flows | Initiator |
 |---|---|---|
@@ -212,5 +212,9 @@ The dashboard origin must also be in the API's `CORS_ORIGINS` (default includes 
 
 | Repo | Role | Description |
 |---|---|---|
-| **[sentry_frontend](https://github.com/kudzaiprichard/sentry_frontend)** | Admin dashboard (this repo) | Next.js 16 + React 19 panel. Renders the inference console, history, install management, and user admin. |
-| **[sentry-api](https://github.com/kudzaiprichard/sentry-api)** | Backend API | FastAPI + PostgreSQL service. Owns auth, the inference pipeline (Groq + Gemini + Playwright), and extension install governance. |
+| **[sentry_frontend](https://github.com/starpearl03/sentry_frontend)** | Admin dashboard (this repo) | Next.js 16 + React 19 panel. Renders the inference console, history, install management, and user admin. |
+| **[sentry-api](https://github.com/starpearl03/sentry-api)** | Backend API | FastAPI + PostgreSQL service. Owns auth, the inference pipeline (Groq + Gemini + Playwright), and extension install governance. |
+
+## Author
+
+Felistas V. Charuka · [github.com/starpearl03](https://github.com/starpearl03)
